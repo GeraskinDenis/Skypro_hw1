@@ -18,5 +18,16 @@ public class Main {
         double boxerWeight2 = 82.7;
         System.out.println("Общий вес двух бойцов:" + (boxerWeight1 + boxerWeight2));
         System.out.println("Разница между весами бойцов: " + (boxerWeight1 - boxerWeight2));
+
+        // Задача 3
+        int bananaWeight = 80;
+        int milkWeight = 105;
+        int iceCreamWeight = 100;
+        int eggWeight = 70;
+        int breakfastWeight = (bananaWeight * 5) + (milkWeight * 2)
+                + (iceCreamWeight * 2) + (eggWeight * 4);
+        System.out.println("Вес спорт-завтрака " + breakfastWeight + " гр.");
+        float breakfastWeightKg = breakfastWeight / 1_0000F;
+        System.out.println("Вес спорт-завтрака " + breakfastWeightKg + " кг.");
     }
 }
