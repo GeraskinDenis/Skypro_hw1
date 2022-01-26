@@ -14,12 +14,13 @@ public class Main {
         double vDouble = 10.45;
 
         // Задача 2
-        double boxerWeight1 = 78.2;
-        double boxerWeight2 = 82.7;
-        System.out.println("Общий вес двух бойцов:" + (boxerWeight1 + boxerWeight2));
-        System.out.println("Разница между весами бойцов: " + (boxerWeight1 - boxerWeight2));
+        float boxerWeight1 = 78.2F;
+        float boxerWeight2 = 82.7F;
+        System.out.println("Общий вес двух бойцов: " + (boxerWeight1 + boxerWeight2));
+        System.out.println("Разница между весами бойцов: " + (boxerWeight2 - boxerWeight1));
 
         // Задача 3
+        System.out.println();
         int bananaWeight = 80;
         int milkWeight = 105;
         int iceCreamWeight = 100;
@@ -31,8 +32,28 @@ public class Main {
         System.out.println("Вес спорт-завтрака " + breakfastWeightKg + " кг.");
 
         // Задача 4
+        System.out.println();
         int overweight = 7;
         System.out.println("Количество дней (потеря 250 гр/день): " + (overweight * 1_000 / 250));
         System.out.println("Количество дней (потеря 500 гр/день): " + (overweight * 1_000 / 500));
+
+        // Задача 5
+        System.out.println();
+        float interest = 10F;
+
+        float marySalary = 67760F;
+        float maryNewSalary = marySalary * (1F + interest / 100F);
+        System.out.println("Маша теперь получает " + maryNewSalary + " рублей. Годовой доход вырос на "
+                + ((maryNewSalary - marySalary) * 12) + " рублей.");
+
+        int denisSalary = 83690;
+        float denisNewSalary = denisSalary * (1F + interest / 100F);
+        System.out.println("Денис теперь получает " + denisNewSalary + " рублей. Годовой доход вырос на "
+                + ((denisNewSalary - denisSalary) * 12) + " рублей.");
+
+        int kristinaSalary = 76230;
+        float kristinaNewSalary = kristinaSalary * (1F + interest / 100F);
+        System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на "
+                + ((kristinaNewSalary - kristinaSalary) * 12) + " рублей.");
     }
 }
