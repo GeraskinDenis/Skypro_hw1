@@ -29,5 +29,10 @@ public class Main {
         System.out.println("Вес спорт-завтрака " + breakfastWeight + " гр.");
         float breakfastWeightKg = breakfastWeight / 1_0000F;
         System.out.println("Вес спорт-завтрака " + breakfastWeightKg + " кг.");
+
+        // Задача 4
+        int overweight = 7;
+        System.out.println("Количество дней (потеря 250 гр/день): " + (overweight * 1_000 / 250));
+        System.out.println("Количество дней (потеря 500 гр/день): " + (overweight * 1_000 / 500));
     }
 }
