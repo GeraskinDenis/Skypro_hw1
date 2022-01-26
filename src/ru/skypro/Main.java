@@ -12,5 +12,11 @@ public class Main {
         // Дробные числа
         float vFloat = 0.123F;
         double vDouble = 10.45;
+
+        // Задача 2
+        double boxerWeight1 = 78.2;
+        double boxerWeight2 = 82.7;
+        System.out.println("Общий вес двух бойцов:" + (boxerWeight1 + boxerWeight2));
+        System.out.println("Разница между весами бойцов: " + (boxerWeight1 - boxerWeight2));
     }
 }
