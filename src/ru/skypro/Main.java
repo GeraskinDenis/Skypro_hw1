@@ -67,5 +67,22 @@ public class Main {
             int result = a * (b + (c - d * e));
             System.out.println(-result);
         }
+
+        // Задача 7
+        {
+            System.out.println();
+            int a = 5;
+            int b = 7;
+            a = a + b;
+            b = a - b;
+            a = a - b;
+        }
+
+        // Задача 8
+        {
+            System.out.println();
+            int a = 875;
+            int b = a % 100 / 10;
+        }
     }
 }
