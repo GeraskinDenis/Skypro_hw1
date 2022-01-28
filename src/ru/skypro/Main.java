@@ -55,5 +55,17 @@ public class Main {
         float kristinaNewSalary = kristinaSalary * (1F + interest / 100F);
         System.out.println("Кристина теперь получает " + kristinaNewSalary + " рублей. Годовой доход вырос на "
                 + ((kristinaNewSalary - kristinaSalary) * 12) + " рублей.");
+
+        // Задача 6
+        {
+            System.out.println();
+            int a = 12;
+            int b = 27;
+            int c = 44;
+            int d = 15;
+            int e = 9;
+            int result = a * (b + (c - d * e));
+            System.out.println(-result);
+        }
     }
 }
