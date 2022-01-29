@@ -1,6 +1,6 @@
 package ru.skypro;
 
-public class Main {
+public class HomeWork_1_2 {
     public static void main(String[] args) {
 
         // Задача 1
