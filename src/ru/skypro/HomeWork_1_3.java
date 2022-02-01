@@ -7,8 +7,8 @@ public class HomeWork_1_3 {
         // Задание 1
         {
             System.out.println("\nЗадание №1");
-            boolean clientOS = false;
-            if (clientOS) {
+            byte clientOS = 0;
+            if (clientOS == 0) {
                 System.out.println("Установите версию приложения для iOS по ссылке");
             } else {
                 System.out.println("Установите версию приложения для Android по ссылке");
@@ -18,8 +18,8 @@ public class HomeWork_1_3 {
         {
             System.out.println("\nЗадание №2");
             int clientDeviceYear = 2015;
-            boolean clientOS = true;
-            if (clientOS) {
+            byte clientOS = 1;
+            if (clientOS == 0) {
                 if (clientDeviceYear >= 2015) {
                     System.out.println("Установите версию приложения для iOS по ссылке");
                 } else {
@@ -36,39 +36,26 @@ public class HomeWork_1_3 {
         // Задание 3
         {
             System.out.println("\nЗадание №3");
-            int year = 2021;
-            int leapYear = year / 400 * 400;
-            if ((year - leapYear) % 4 > 0) {
-                System.out.println(year + " год не является високосным.");
-            } else {
+            int year = 2024;
+            if ((year % 400 == 0) || (year % 4 == 0)) {
                 System.out.println(year + " год является високосным.");
+            } else {
+                System.out.println(year + " год не является високосным.");
             }
         }
         // Задание 4
         {
             System.out.println("\nЗадание №4");
-            int deliveryDistance = 40;
-            int distanceOnTheFirstDay = 20;
-            int intervalPerDay = 40;
+            int deliveryDistance = 95;
             int deliveryDays = 0;
-            int distanceLeft = deliveryDistance;
-
-            if (distanceLeft > 0) {
+            if (deliveryDistance <= 20) {
                 deliveryDays = 1;
-                distanceLeft -=distanceOnTheFirstDay;
+            } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
+                deliveryDays = 2;
+            } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+                deliveryDays = 3;
             }
-
-            if(distanceLeft > 0)
-            {
-                deliveryDays += distanceLeft / intervalPerDay;
-                if((distanceLeft % intervalPerDay) > 0)
-                {
-                    deliveryDays++;
-                }
-            }
-
             System.out.println("Потребуется дней: " + deliveryDays);
-
         }
 
         // Задание 5
@@ -77,8 +64,7 @@ public class HomeWork_1_3 {
             int monthNumber = 12;
             String season;
 
-            switch (monthNumber)
-            {
+            switch (monthNumber) {
                 case 12:
                 case 1:
                 case 2:
