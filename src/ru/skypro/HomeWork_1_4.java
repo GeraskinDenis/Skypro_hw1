@@ -20,10 +20,8 @@ public class HomeWork_1_4 {
             int firstFriday = 2;
             final int DAYS_IN_WEEK = 7;
             int daysInMonth = 31;
-            for (int currentDay = 1; currentDay <= daysInMonth; currentDay++) {
-                if (currentDay == firstFriday + DAYS_IN_WEEK * (currentDay / DAYS_IN_WEEK)) {
-                    System.out.println("Сегодня пятница, " + currentDay + "-е число.");
-                }
+            for (int currentDay = firstFriday; currentDay <= daysInMonth; currentDay += DAYS_IN_WEEK) {
+                System.out.println("Сегодня пятница, " + currentDay + "-е число.");
             }
 
         }
