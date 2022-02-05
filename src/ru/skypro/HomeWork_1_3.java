@@ -47,13 +47,12 @@ public class HomeWork_1_3 {
         {
             System.out.println("\nЗадание №4");
             int deliveryDistance = 95;
-            int deliveryDays = 0;
-            if (deliveryDistance <= 20) {
-                deliveryDays = 1;
-            } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-                deliveryDays = 2;
-            } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-                deliveryDays = 3;
+            int deliveryDays = 1;
+            if (deliveryDistance > 20) {
+                deliveryDays++;
+            }
+            if (deliveryDistance > 60 && deliveryDistance <= 100) {
+                deliveryDays++;
             }
             System.out.println("Потребуется дней: " + deliveryDays);
         }
