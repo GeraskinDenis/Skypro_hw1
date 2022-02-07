@@ -2,6 +2,10 @@ package ru.skypro;
 
 public class HomeWork_1_4 {
     public static void main(String[] args) {
+        /**
+         *
+         */
+
         // Задание 1
         {
             System.out.println("\nЗадание 1");
@@ -35,6 +39,32 @@ public class HomeWork_1_4 {
                 if (yearOfComet > currentYear - yearsAgo) {
                     System.out.println(yearOfComet);
                 }
+            }
+        }
+        // Задание 4
+        {
+            System.out.println("\nЗадание 4");
+            for (int i = 1; i <= 30; i++) {
+                System.out.print(i + ": ");
+                if ((i % 3 == 0) && (i % 5 == 0)) {
+                    System.out.print("ping pong");
+                } else if (i % 3 == 0) {
+                    System.out.print("ping");
+                } else if (i % 5 == 0) {
+                    System.out.print("pong");
+                }
+                System.out.println();
+            }
+        }
+        // Задание 5
+        {
+            System.out.println("\nЗадание 5");
+            int x = 0;
+            int y = 1;
+            for (int i = 0; i < 5; i++) {
+                System.out.print(x + " " + y + " ");
+                x += y;
+                y +=x;
             }
         }
     }

@@ -4,6 +4,11 @@ import javax.crypto.spec.PSource;
 
 public class HomeWork_1_3 {
     public static void main(String[] args) {
+        /**
+         * 1.3 УСЛОВНЫЕ ОПЕРАТОРЫ
+         */
+
+
         // Задание 1
         {
             System.out.println("\nЗадание №1");
@@ -36,8 +41,8 @@ public class HomeWork_1_3 {
         // Задание 3
         {
             System.out.println("\nЗадание №3");
-            int year = 2024;
-            if ((year % 400 == 0) || (year % 4 == 0)) {
+            int year = 2000;
+            if ((year % 4 == 0) && ((year % 100 != 0) || year % 400 == 0)) {
                 System.out.println(year + " год является високосным.");
             } else {
                 System.out.println(year + " год не является високосным.");
@@ -47,13 +52,12 @@ public class HomeWork_1_3 {
         {
             System.out.println("\nЗадание №4");
             int deliveryDistance = 95;
-            int deliveryDays = 0;
-            if (deliveryDistance <= 20) {
-                deliveryDays = 1;
-            } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-                deliveryDays = 2;
-            } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-                deliveryDays = 3;
+            int deliveryDays = 1;
+            if (deliveryDistance > 20) {
+                deliveryDays++;
+            }
+            if (deliveryDistance > 60 && deliveryDistance <= 100) {
+                deliveryDays++;
             }
             System.out.println("Потребуется дней: " + deliveryDays);
         }
@@ -89,6 +93,64 @@ public class HomeWork_1_3 {
                     season = "ERROR: The month number is incorrect.";
             }
             System.out.println(season);
+        }
+
+        // Задание 6
+        {
+            System.out.println("\nЗадание 6");
+            int age = 19;
+            int salary = 100_000;
+            float result = 0;
+
+            if (age < 23) {
+                result = salary * 2;
+            } else if (age >= 23) {
+                result = salary * 3;
+            }
+
+            if (salary >= 80_000) {
+                result *= 1.2F;
+            } else if (salary >= 50_000) {
+                result *= 1.5F;
+            }
+            System.out.printf("Мы готовы выдать вам кредитную карту с лимитом %.2f рублей\n", result);
+        }
+
+        // Задание 7
+        {
+            System.out.println("\nЗадание 7");
+            // Входные параметры
+            float rate = 10;
+            int loanTermInMonths = 12;
+            int maximumPercentageOfSalary = 50;
+            int age = 25;
+            int salary = 60_000;
+            int wantedSum = 330_000;
+            boolean loanApproved;
+
+            // Находим ставку
+            if (age <= 23) {
+                rate += 1;
+            } else if (age < 30) {
+                rate += 0.5F;
+            }
+
+            if (salary > 80_000) {
+                rate -= 0.7;
+            }
+
+            // Расчетаем первый платёж по кредиту
+            double loanBodyPerMonth = wantedSum / loanTermInMonths;
+            double interestAmount = wantedSum * rate / loanTermInMonths / 100;
+            double firstPayment = loanBodyPerMonth + interestAmount;
+
+            // Расчетаем максимальный платёж по кредиту
+            float maxPayment = salary * maximumPercentageOfSalary / 100;
+            loanApproved = maxPayment > firstPayment;
+
+            // Выводим результат
+            System.out.printf("Максимальный платеж при ЗП %d равен %.2f рублей. Платеж по кредиту %.2f рублей. "
+                    + ((loanApproved) ? "Одобрено." : "Отказано.") + "\n", salary, maxPayment, firstPayment);
         }
     }
 }
