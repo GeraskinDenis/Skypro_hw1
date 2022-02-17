@@ -41,6 +41,88 @@ public class HomeWork_1_6 {
             System.out.print(reverseFullName[i]);
         }
         System.out.println();
+
+        // Задачи повышенной сложности
+        // Задание 5
+        System.out.println("\nЗадание 5");
+        {
+            int[][] matrix = new int[3][3];
+            for (int i = 0; i < matrix.length; i++) {
+                matrix[i][i] = 1;
+                matrix[i][matrix.length - 1 - i] = 1;
+            }
+            for (int[] row : matrix) {
+                for (int column : row) {
+                    System.out.print(column + " ");
+                }
+                System.out.println();
+            }
+        }
+
+        // Задание 6
+        System.out.println("\nЗадание 6");
+        {
+            int[] ints = {5, 4, 3, 2, 1};
+            int[] copyOfInts = new int[ints.length];
+            int maxIndex = ints.length - 1;
+            for (int i = 0; i < ints.length; i++) {
+                copyOfInts[maxIndex - i] = ints[i];
+            }
+            System.out.println(Arrays.toString(copyOfInts));
+        }
+
+        // Задание 7
+        System.out.println("\nЗадание 7");
+        {
+            int[] ints = {5, 4, 3, 2, 1};
+            int maxIndex = ints.length - 1;
+            for (int i = 0; i < ints.length / 2; i++) {
+                ints[i] += ints[maxIndex - i];
+                ints[maxIndex - i] = ints[i] - ints[maxIndex - i];
+                ints[i] = ints[i] - ints[maxIndex - i];
+            }
+            System.out.println(Arrays.toString(ints));
+        }
+
+        // Задание 8
+        System.out.println("\nЗадание 8");
+        {
+            int[] ints = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+            final int SUM = -2;
+            Arrays.sort(ints);
+            int maxIndex = ints.length - 1;
+            boolean needBreak = false;
+            for (int i = 0; ints[i] < 0; i++) {
+                int searchNumber = SUM - ints[i];
+                for (int ii = maxIndex; ints[ii] >= searchNumber; ii--) {
+                    if (ints[ii] == searchNumber) {
+                        System.out.printf("Сумма чисел %d и %d равно %d\n", ints[i], ints[ii], ints[i] + ints[ii]);
+                        needBreak = true;
+                        break;
+                    }
+                }
+                if (needBreak) break;
+            }
+        }
+
+        // Задание 9
+        System.out.println("\nЗадание 9");
+        {
+            int[] ints = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+            final int SUM = -2;
+            Arrays.sort(ints);
+            int maxIndex = ints.length - 1;
+            for (int i = 0; ints[i] < 0; i++) {
+                int searchNumber = SUM - ints[i];
+                for (int ii = maxIndex; ints[ii] >= searchNumber; ii--) {
+                    if (ints[ii] == searchNumber) {
+                        System.out.printf("Сумма чисел %d и %d равно %d\n", ints[i], ints[ii], ints[i] + ints[ii]);
+                        maxIndex = ii - 1;
+                        break;
+                    }
+                }
+            }
+        }
     }
 
     public static int[] generateRandomArray() {
