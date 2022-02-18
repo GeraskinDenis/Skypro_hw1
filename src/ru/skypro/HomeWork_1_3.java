@@ -1,13 +1,11 @@
 package ru.skypro;
 
-import javax.crypto.spec.PSource;
+/**
+ * 1.3 УСЛОВНЫЕ ОПЕРАТОРЫ
+ */
 
 public class HomeWork_1_3 {
     public static void main(String[] args) {
-        /**
-         * 1.3 УСЛОВНЫЕ ОПЕРАТОРЫ
-         */
-
 
         // Задание 1
         {

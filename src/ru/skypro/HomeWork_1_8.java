@@ -2,6 +2,10 @@ package ru.skypro;
 
 import java.util.Arrays;
 
+/**
+ * Методы
+ */
+
 public class HomeWork_1_8 {
 
     public static boolean isLeapYear(int year) {

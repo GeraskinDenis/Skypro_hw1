@@ -1,10 +1,12 @@
 package ru.skypro;
 
+/**
+ * Циклы
+ */
+
+
 public class HomeWork_1_4 {
     public static void main(String[] args) {
-        /**
-         *
-         */
 
         // Задание 1
         {
@@ -64,7 +66,7 @@ public class HomeWork_1_4 {
             for (int i = 0; i < 5; i++) {
                 System.out.print(x + " " + y + " ");
                 x += y;
-                y +=x;
+                y += x;
             }
         }
     }
