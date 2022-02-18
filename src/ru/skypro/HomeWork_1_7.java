@@ -1,5 +1,9 @@
 package ru.skypro;
 
+/**
+ * Строки
+ */
+
 public class HomeWork_1_7 {
     public static void main(String[] args) {
         // Задание №1

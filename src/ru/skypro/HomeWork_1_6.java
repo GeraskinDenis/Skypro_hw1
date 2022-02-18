@@ -3,6 +3,10 @@ package ru.skypro;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * Массивы 2
+ */
+
 public class HomeWork_1_6 {
 
     public static void main(String[] args) {

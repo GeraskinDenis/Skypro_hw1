@@ -1,7 +1,11 @@
 package ru.skypro;
 
+/**
+ * Массивы 1
+ */
 public class HomeWork_1_5 {
     public static void main(String[] args) {
+
         // Задание 1
         System.out.println("\nЗадание 1");
         int[] ints = new int[]{1, 2, 3};
