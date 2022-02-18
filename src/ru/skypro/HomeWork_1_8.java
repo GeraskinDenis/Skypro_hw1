@@ -9,31 +9,35 @@ public class HomeWork_1_8 {
     }
 
     public static String getAppLink(byte OS, int yearOfManufacture) {
-        String link;
+        String strOS;
         if (OS == 0) {
-            if (yearOfManufacture >= 2015) {
-                link = "Установите версию приложения для iOS по ссылке";
-            } else {
-                link = "Установите облегченную версию приложения для iOS по ссылке";
-            }
+            strOS = "iOS";
+        } else if (OS == 1) {
+            strOS = "Android";
         } else {
-            if (yearOfManufacture >= 2015) {
-                link = "Установите версию приложения для Android по ссылке";
-            } else {
-                link = "Установите облегченную версию приложения для Android по ссылке";
-            }
+            return "Не верно указана операционная система устройства!";
         }
-        return link;
+        return String.format("Установите %s версию приложения для %s по ссылке"
+                , (yearOfManufacture < 2015) ? "облегченную" : "\b", strOS);
     }
 
     public static int getNumberOfDeliveryDays(int deliveryDistance) {
+        int maxDeliveryDays = 100;
         int deliveryDays = 1;
+
+        if (deliveryDistance > maxDeliveryDays) {
+            System.out.printf("Расстояние доставки превышает максимально допустимое расстояние %d км.!\n", maxDeliveryDays);
+            return -1;
+        }
+
         if (deliveryDistance > 20) {
             deliveryDays++;
         }
+
         if (deliveryDistance > 60 && deliveryDistance <= 100) {
             deliveryDays++;
         }
+
         return deliveryDays;
     }
 
@@ -78,9 +82,11 @@ public class HomeWork_1_8 {
         // Задание №3
         {
             System.out.println("\nЗадание №3");
-            int deliveryDistance = 65;
+            int deliveryDistance = 165;
             int numberOfDeliveryDays = getNumberOfDeliveryDays(deliveryDistance);
-            System.out.println("Для доставки на расстояние " + deliveryDistance + " км. потребуется " + numberOfDeliveryDays + " дн.");
+            if (numberOfDeliveryDays > 0) {
+                System.out.println("Для доставки на расстояние " + deliveryDistance + " км. потребуется " + numberOfDeliveryDays + " дн.");
+            }
         }
 
         // Задание №4
