@@ -1,6 +1,7 @@
 package ru.skypro;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Методы
@@ -63,6 +64,22 @@ public class HomeWork_1_8 {
         }
     }
 
+    private static void fillArray(int[] ints) {
+        Random random = new Random();
+        for (int i = 0; i < ints.length; i++) {
+            ints[i] = random.nextInt(100_000) + 100_000;
+        }
+    }
+
+    private static double getAverage(int[] ints) {
+        int sum = getSumOfArray(ints);
+        return sum / (double) ints.length;
+    }
+
+    private static int getSumOfArray(int[] ints) {
+        return Arrays.stream(ints).sum();
+    }
+
     public static void main(String[] args) {
 
         // Задание №1
@@ -105,6 +122,15 @@ public class HomeWork_1_8 {
             int[] ints = {3, 2, 1, 6, 5};
             reverseOrder(ints);
             System.out.println(Arrays.toString(ints));
+        }
+
+        // Задание №6
+        {
+            System.out.println("\nЗадание №6");
+            int[] ints = new int[30];
+            fillArray(ints);
+            double average = getAverage(ints);
+            System.out.println(average);
         }
     }
 }
